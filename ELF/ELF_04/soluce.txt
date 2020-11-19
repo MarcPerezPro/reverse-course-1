@@ -1,0 +1,12 @@
+En regardant le code asm on se rends compte qu'il faut que le flag fasse une longueur de 0x10 soit 16 en décimal "cmp    edi,0x10"
+
+Ensuite on voit que l'on additionne tous les charactères un à un "add ecx,eax" dans un registre ecx
+
+Ensuite on voit qu'on compare le résultat de la somme à 0x680 (1664 en dec) "cmp ecx,0x680"
+
+Il ne reste donc plus qu'a trouver comment faire 1664 avec une somme de 16 char
+
+1664 / 16 = 104
+104 en ascii est 'h'
+
+donc le flag est h*16
